@@ -56,6 +56,20 @@ body {
     line-height: 1.26316; /* 126.316% */
     margin-bottom: 16px;
 }
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
 /* Header */
 .header {
     background: #fffcf4;
@@ -310,6 +324,11 @@ body {
     line-height: 1.667; /* 166.667% */
     margin-bottom: 6px;
     text-decoration: none;
+    padding-right: 6px;
+}
+.popular .info .ratting {
+    display: flex;
+    align-items: center;
 }
 .popular .info .value {
     margin-left: 6px;
@@ -343,4 +362,69 @@ body {
     background: #ffb900;
     border-color: #ffb900;
     cursor: pointer;
+}
+
+/*           Feedback */
+.feedback {
+    margin-top: 200px;
+    background: #2e2100;
+    padding: 96px 0;
+}
+.feedback .feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+.feedback .feedback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+.feedback .info {
+}
+.feedback .info .avatar {
+    width: 74px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+}
+.feedback .info .title {
+    color: #f7f7f7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.4167; /* 141.667% */
+    margin-bottom: 4px;
+}
+.feedback .info .desc {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85; /* 185.714% */
+    margin-bottom: 28px;
+}
+.feedback .info .dots {
+    display: flex;
+}
+.feedback .info .dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    margin-right: 6px;
+}
+.feedback .info .dot.active {
+    background-color: #ffb900;
+}
+.feedback .content {
+    margin-left: auto;
+    width: 66%;
+}
+.feedback .content blockquote {
+    color: #fff;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.538; /* 153.846% */
+    margin-left: 30px;
 }
